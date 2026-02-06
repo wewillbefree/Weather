@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="weather">
+        <h1 class="weather__title">Погода</h1>
+        
+        <form class="weather__form">
+            <input 
+                class="weather__input" 
+                type="text" 
+                placeholder="Введите город"
+                required
+            >
+            <button class="weather__button" type="submit">Найти</button>
+        </form>
+        
+        <div class="weather__result" style="display: none;">
+            <h2 class="weather__city">b</h2>
+            <img class="weather__icon" src="" alt="Погода">
+            <p class="weather__temp">1</p>
+            <p class="weather__description">2</p>
+        </div>
+        
+        <p class="weather__error" style="display: none;"></p>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
