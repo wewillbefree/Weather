@@ -1,5 +1,9 @@
 const API_KEY = '3aa45153f7531c233289dc68e21daf7a';
 
+import { baseUrl } from "./urls.js";
+import { renderWeather, dataWeather } from "./render.js";
+import { weatherError, weatherContainer } from "./constants.js";
+
 const buildWeatherUrl = (city) => {
    const params = new URLSearchParams({
         q: city,
@@ -9,6 +13,12 @@ const buildWeatherUrl = (city) => {
     });
     return `${baseUrl}?${params}`;
 };
+
+const showError = (message) => {
+    weatherError.textContent = message;
+    weatherError.style.display = 'block'
+    weatherContainer.style.display = 'none'
+}
 
 const getWeather = async (city) => {
     try {

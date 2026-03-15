@@ -16,4 +16,4 @@ export {
     weatherDescription,
     weatherIcon,
     weatherError,
-}
+};

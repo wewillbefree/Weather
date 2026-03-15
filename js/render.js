@@ -1,3 +1,7 @@
+import { weatherCity, weatherTemp, weatherDescription, weatherContainer, weatherIcon } from "./constants.js";
+import { iconUrl } from "./urls.js";
+import { capitalizeFirst } from "./helpers.js";
+
 const renderWeather = ({city, temp, description, icon}) => {
     weatherCity.textContent = city;
     weatherTemp.textContent = temp;
